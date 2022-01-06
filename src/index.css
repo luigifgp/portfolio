@@ -1,3 +1,32 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+   span{
+   @apply font-Karla ;
+  }
+  p{
+     @apply font-mono font-semibold;
+  }
+
+}
+
+/* Sidebar */
+
+@layer components {
+
+  html{
+   @apply  bg-DarkModelight ;
+   
+  }
+ 
+    
+  
+  .icon_sidebar{
+    @apply fill-gray-500 hover:fill-OrangeColor transition-all duration-500 hover:scale-110;
+  }
+
+}

@@ -1,10 +1,18 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/**/*.html"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      Karla: ["Karla", "sans-serif"],
+      mono: ["Source Sans Pro", ...defaultTheme.fontFamily.mono],
+    },
+    letterSpacing: {
+      tighter: "-.1em",
+    },
     fontSize: {
       xm: ".65rem",
       sm: ".85rem",
@@ -16,6 +24,8 @@ module.exports = {
       "5xl": "3rem",
       "6xl": "4rem",
       "7xl": "5rem",
+      "8xl": "6rem",
+      "9xl": "7rem",
     },
     fill: (theme) => ({
       ...theme("colors"),
@@ -185,7 +195,7 @@ module.exports = {
       blueBorder: "#008EFF",
       lightLimeColor: "#4CAF50",
       // DarkModeColors patterns
-      DarkModelight: "£27272C",
+      DarkModelight: "#27272C",
       DarkModeDark: "#1E1C22",
       //combinable color
       OrangeColor: "#F37821",
