@@ -14,7 +14,7 @@
 
 }
 
-/* Sidebar */
+
 
 @layer components {
 
@@ -22,11 +22,18 @@
    @apply  bg-DarkModelight ;
    
   }
- 
-    
-  
+  /* Sidebar */
   .icon_sidebar{
     @apply fill-gray-500 hover:fill-OrangeColor transition-all duration-500 hover:scale-110;
   }
 
+  /* homePage */
+  .homepage{
+    @apply grid pt-64 z-20;
+  }
+  .homepage span {
+   
+  }
+
 }
+

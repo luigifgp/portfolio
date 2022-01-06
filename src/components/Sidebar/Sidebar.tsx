@@ -38,7 +38,7 @@ function  SideBar()  {
       {/* ToDo DarkMode bg-white dark */}
 
       <div
-        className={`grid w-44 h-screen  bg-DarkModeDark overflow-hidden transition-all duration-500 -translate-x-60  z-20 xl:translate-x-0 ${
+        className={`grid w-44 h-screen bg-DarkModeDark overflow-hidden transition-all duration-500 -translate-x-60  z-20 xl:translate-x-0 ${
           sidebar ? "translate-x-0" : "-translate-x-60"
         }`}
       >
@@ -53,7 +53,9 @@ function  SideBar()  {
               <li>
                 {/* ToDo DarkMode bg-white dark */}
                 <a href="#wq" className=" ">
-                  <p className="text-xl  ">{route.name}</p>
+                  <p className="text-xl  font-semibold ">
+                    {route.name}
+                  </p>
                 </a>
               </li>
             </ul>
