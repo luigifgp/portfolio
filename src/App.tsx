@@ -9,7 +9,7 @@ function App() {
     //TODO DARKMODE bg-slate-200 dark:
     <div className=" bg-DarkModelight ">
       <SideBar />
-      <div className="ml-16 xl:ml-52 transition-all">
+      <div className="ml-4 xl:ml-52 transition-all">
         <HomePage />
       </div>
     </div>

@@ -29,11 +29,15 @@
 
   /* homePage */
   .homepage{
-    @apply grid pt-64 z-20;
+    @apply grid pt-64 z-20 transition-all duration-200;
+
+    
   }
-  .homepage span {
-   
+  .homepage_presatation{
+    @apply inline-block tracking-tighter xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl  text-4xl 
+    font-medium text-white hover:text-OrangeColor transition-all duration-200;
   }
+  
 
 }
 

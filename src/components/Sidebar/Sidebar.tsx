@@ -33,7 +33,7 @@ function  SideBar()  {
 
 
   return (
-    <div className="fixed ">
+    <div className="fixed z-50">
       <HamburgerIcon />
       {/* ToDo DarkMode bg-white dark */}
 
@@ -43,8 +43,8 @@ function  SideBar()  {
         }`}
       >
         <div className="h-32 shadow-zinc-900 shadow-lg   ">
-          <a className="" href="/">
-            <img className=" w-42 mt-2" src="/svg/logo-luigi.svg" alt="logo" />
+          <a className="grid justify-items-center" href="/">
+            <img className=" w-28 h-28  mt-2" src="/svg/logo-luigi.svg" alt="logo" />
           </a>
         </div>
         <div className="grid  justify-items-center gap-2 ">
@@ -53,9 +53,7 @@ function  SideBar()  {
               <li>
                 {/* ToDo DarkMode bg-white dark */}
                 <a href="#wq" className=" ">
-                  <p className="text-xl  font-semibold ">
-                    {route.name}
-                  </p>
+                  <p className="text-xl  font-semibold ">{route.name}</p>
                 </a>
               </li>
             </ul>

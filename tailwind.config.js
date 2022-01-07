@@ -14,7 +14,7 @@ module.exports = {
       tighter: "-.1em",
     },
     fontSize: {
-      xm: ".65rem",
+      xm: ".55rem",
       sm: ".85rem",
       lg: "1rem",
       xl: "1.25rem",

@@ -15,7 +15,7 @@ const Letter = (letter: letter) => {
       onMouseEnter={() => setActiveLetter(!activeLetter)}
       onMouseLeave={() =>  setTimeout(() => { setActiveLetter(!activeLetter); }, 900)}
       className={
-        `inline-block tracking-tighter  text-8xl font-medium text-white hover:text-OrangeColor transition-all duration-75"
+        `homepage_presatation
           ${letter.className } ${active}`}
     >
       {letter.letter}
