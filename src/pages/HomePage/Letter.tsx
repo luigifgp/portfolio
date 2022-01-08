@@ -5,7 +5,7 @@ interface letter {
     className: string;
 }
 
-const Letter = (letter: letter) => {
+const Letter:React.FunctionComponent<letter> = (props) => {
   const [activeLetter, setActiveLetter] = useState<boolean>(false);
 
   const active = activeLetter ? "animate-wiggle" : "";
@@ -16,9 +16,9 @@ const Letter = (letter: letter) => {
       onMouseLeave={() =>  setTimeout(() => { setActiveLetter(!activeLetter); }, 900)}
       className={
         `homepage_presatation
-          ${letter.className } ${active}`}
+          ${props.className } ${active}`}
     >
-      {letter.letter}
+      {props.letter}
     </span>
   );
 };

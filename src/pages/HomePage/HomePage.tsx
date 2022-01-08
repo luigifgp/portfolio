@@ -1,9 +1,10 @@
 import React from 'react';
 import Presentation from './HomePage_Presentation';
-import HamburgerIcon from '../Sidebar/HamburgerIcon';
+import HamburgerIcon from '../../components/Sidebar/HamburgerIcon';
 
 
-function HomePage() {
+
+const HomePage:React.FunctionComponent =() => {
     return (
       //TODO DARKMODE bg-slate-200 dark:
       <div className="grid ">
