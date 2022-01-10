@@ -12,6 +12,8 @@
      @apply font-mono font-semibold;
   }
 
+  
+
 }
 
 
@@ -21,6 +23,10 @@
   html{
    @apply  bg-DarkModelight ;
    
+  }
+
+  .content{
+   @apply lg:text-xl md:text-sm text-sm text-white !font-normal;
   }
   /* Sidebar */
   .icon_sidebar{
@@ -42,6 +48,16 @@
   .aboutpage{
     @apply grid xl:grid-flow-col xl:pt-48 justify-self-stretch justify-items-center xl:justify-self-start 
       gap-10 xl:gap-0 pt-20 lg:pt-10  transition-all duration-200;
+  }
+
+  /* skillPage */
+
+  .skillpage{
+   @apply grid xl:grid-cols-2 xl:p-0 p-4 sm:p-14 lg:p-20 gap-4 pt-20;
+  }
+
+  .skillpage h1 {
+    @apply text-PaidColor text-xl md:text-2x1 xl:text-4xl font-mono font-bold;
   }
 }
 

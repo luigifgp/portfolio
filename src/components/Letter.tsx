@@ -13,7 +13,7 @@ const Letter:React.FunctionComponent<letter> = (props) => {
   return (
     <span
       onMouseEnter={() => setActiveLetter(!activeLetter)}
-      onMouseLeave={() =>  setTimeout(() => { setActiveLetter(!activeLetter); }, 900)}
+      onMouseLeave={() =>  setTimeout(() => {activeLetter && setActiveLetter(!activeLetter); }, 10000)}
       className={
         `homepage_presatation
           ${props.className } ${active}`}
