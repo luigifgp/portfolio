@@ -3,7 +3,7 @@ import useMeasure from "react-use-measure";
 import { useTransition, a } from "@react-spring/web";
 import shuffle from "lodash.shuffle";
 import useMedia from "./useMedia";
-import data from "./data";
+import data from "./SkillsData";
 
 
 function Animation() {

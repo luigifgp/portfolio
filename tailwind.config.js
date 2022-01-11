@@ -85,6 +85,9 @@ module.exports = {
       blueBorder: "#008EFF",
       limeColor: "#4D7C0F",
       lightLimeColor: "#4CAF50",
+      // DarkModeColors patterns
+      DarkModelight: "#27272C",
+      DarkModeDark: "#1E1C22",
       //combinable color
       OrangeColor: "#F37821",
       PurpleColor: "#912C78",
@@ -140,6 +143,9 @@ module.exports = {
       blueBorder: "#008EFF",
       limeColor: "#4D7C0F",
       lightLimeColor: "#4CAF50",
+      // DarkModeColors patterns
+      DarkModelight: "#27272C",
+      DarkModeDark: "#1E1C22",
       //combinable color
       OrangeColor: "#F37821",
       PurpleColor: "#912C78",

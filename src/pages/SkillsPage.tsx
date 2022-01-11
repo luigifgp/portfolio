@@ -1,15 +1,15 @@
 import React from 'react';
-import ProgressBar from '../../components/ProgressBar';
+import ProgressBar from '../components/ProgressBar';
 
-import SkillsTitle from './SkillsPage_Title';
-import Animation from './SkillAnimation';
+import SkillsTitle from './SkillsPageCompt/SkillsPage_Title';
+import Animation from './SkillsPageCompt/SkillsAnimation';
 
 const SkillsPage:React.FunctionComponent =  () => {
 
 
     return (
       <div className="skillpage  ">
-        <div className="xl:pt-60 gap-2">
+        <div className="xl:pt-60 gap-2 xl:p-16">
           <SkillsTitle />
           <div>
             <ul className="content list-disc grid gap-1 ">

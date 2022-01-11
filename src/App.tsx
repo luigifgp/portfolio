@@ -2,22 +2,27 @@ import React, { useEffect } from "react";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SideBar from "./components/Sidebar/Sidebar";
-import HomePage from "./pages/HomePage/HomePage";
-import AboutPage from './pages/AboutPage/AboutPage';
-import SkillsPage from "./pages/SkillsPage/SkillsPage";
+import HomePage from "./pages/HomePage";
+import AboutPage from './pages/AboutPage';
+import SkillsPage from "./pages/SkillsPage";
 import "./App.css";
+import ContactPage from "./pages/ContactPage";
 
 const App: React.FunctionComponent = () => {
   return (
     //TODO DARKMODE bg-slate-200 dark:
-    <main className=" ">
+    <main className="grid">
+      <div className="justify-self-end mr-40 -mt-2 opacity-30 w-1/5 h-4/5 absolute bg-PurpleColor rounded-lg z-10" />
+      <div className="justify-self-start ml-2 mt-32 opacity-20 w-1/5 h-5/6 absolute bg-PurpleColor rounded-lg z-10" />
+      <div className="justify-self-end mt-48 opacity-10 w-10/12 h-2/4 absolute bg-PurpleColor rounded-lg z-10" />
       <SideBar />
       <BrowserRouter>
-        <div className="ml-4 xl:ml-52 transition-all">
+        <div className="ml-4 xl:ml-52 transition-all z-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="about" element={<AboutPage />} />
-            <Route path="skills" element={<SkillsPage/>}/>
+            <Route path="skills" element={<SkillsPage />} />
+            <Route path="contact" element={<ContactPage/>}/>
           </Routes>
         </div>
       </BrowserRouter>

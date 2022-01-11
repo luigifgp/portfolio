@@ -1,64 +1,120 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-   span{
-   @apply font-Karla ;
+@layer base {
+  span {
+    @apply font-Karla;
   }
-  p{
-     @apply font-mono font-semibold;
+  p {
+    @apply font-mono font-semibold;
   }
 
-  
-
+ 
 }
 
-
-
 @layer components {
-
-  html{
-   @apply  bg-DarkModelight ;
-   
+  html {
+    @apply bg-DarkModelight;
   }
 
-  .content{
-   @apply lg:text-xl md:text-sm text-sm text-white !font-normal;
+  .content {
+    @apply lg:text-xl md:text-sm text-sm text-white !font-normal;
+  }
+
+  .button {
+  @apply  mt-12 animate-pulse text-sm md:text-lg grid justify-self-start justify-start pl-6 pr-6  lg:pl-14 lg:pr-14 p-2 lg:p-3 text-OrangeColor border-OrangeColor font-bold border-2 hover:text-white hover:animate-none hover:bg-OrangeColor focus:bg-OrangeColor transition-all duration-700;
   }
   /* Sidebar */
-  .icon_sidebar{
+  .icon_sidebar {
     @apply fill-gray-500 hover:fill-OrangeColor transition-all duration-500 hover:scale-110;
   }
 
   /* homePage */
-  .homepage{
+  .homepage {
     @apply grid pt-64 z-20 transition-all duration-200;
-
-    
   }
 
-  .homepage_presatation{
+  .homepage_presatation {
     @apply inline-block tracking-tighter xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl  text-4xl 
     font-medium text-white hover:text-OrangeColor transition-all duration-200;
   }
   /* aboutPage */
-  .aboutpage{
-    @apply grid xl:grid-flow-col xl:pt-48 justify-self-stretch justify-items-center xl:justify-self-start 
-      gap-10 xl:gap-0 pt-20 lg:pt-10  transition-all duration-200;
+  .aboutpage {
+    @apply grid xl:grid-flow-col p-5 xl:p-14  xl:pt-48 justify-self-stretch justify-items-center xl:justify-self-start 
+      gap-10 xl:gap-0 pt-20 lg:pt-10  transition-all duration-200 z-20;
   }
 
   /* skillPage */
 
-  .skillpage{
-   @apply grid xl:grid-cols-2 xl:p-0 p-4 sm:p-14 lg:p-20 gap-4 pt-20;
+  .skillpage {
+    @apply grid xl:grid-cols-2 xl:p-0 p-4 sm:p-14 lg:p-20 gap-4 pt-20 z-20;
   }
 
   .skillpage h1 {
     @apply text-PaidColor text-xl md:text-2x1 xl:text-4xl font-mono font-bold;
   }
+
+  .contactpage {
+    @apply grid grid-flow-col gap-52;
+  }
+
+  .contactpage input,
+  textarea {
+    @apply block  
+             w-full
+            mt-1
+            p-4
+            border-none
+            border-DarkModelight
+            bg-DarkModelight
+            rounded-sm
+            outline-none
+            placeholder-gray-400
+            text-gray-300
+            font-mono
+            font-semibold;
+  }
 }
 
 /* xl:pt-60 */
+
+.input_container {
+  display: inline-block;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  line-height: 0px;
+}
+
+.input_span {
+  display: inline-block;
+  width: 0px;
+  height: 2px;
+  background: #F37821;
+  position: relative;
+  top: -5px;
+  
+  -webkit-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+.contactpage input,
+textarea:hover,
+.contactpage input,
+textarea:active,
+.contactpage input,
+textarea:focus {
+  outline: none;
+}
+
+.input_container input:active + .input_span,
+.input_container input:focus + .input_span {
+  width: 100%;
+}
+
+.input_container textarea:active + .input_span,
+.input_container textarea:focus + .input_span {
+  width: 100%;
+}
+

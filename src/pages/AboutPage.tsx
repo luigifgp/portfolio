@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AboutTitle from "./AboutPage_Title";
+import AboutTitle from "./AboutPageCompt/AboutPage_Title";
 
 
 
