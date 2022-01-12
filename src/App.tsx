@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-
+import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SideBar from "./components/Sidebar/Sidebar";
 import HomePage from "./pages/HomePage";
 import AboutPage from './pages/AboutPage';
 import SkillsPage from "./pages/SkillsPage";
-import "./App.css";
 import ContactPage from "./pages/ContactPage";
+import ProjectPage from "./pages/ProjectPage";
+import "./App.css";
 
 const App: React.FunctionComponent = () => {
   return (
@@ -22,7 +22,8 @@ const App: React.FunctionComponent = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="skills" element={<SkillsPage />} />
-            <Route path="contact" element={<ContactPage/>}/>
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="projects" element={<ProjectPage/>} />
           </Routes>
         </div>
       </BrowserRouter>

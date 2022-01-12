@@ -11,6 +11,8 @@ import { getFormSubmittedSlector } from "../../store/selectors";
 import { useSelector } from "react-redux";
 import { FcSearch } from "react-icons/fc";
 
+
+
 const containerStyle = {
   width: "100%",
   height: "100%",
@@ -26,20 +28,9 @@ function GoogleMapLocation() {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyBRllLw_g9NCOiObFW8U1ygl820ObrMTJM",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API as string,
   });
 
-  const [map, setMap] = React.useState(null);
-
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map);
-  }, []);
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null);
-  }, []);
 
   return isLoaded ? (
     <GoogleMap
@@ -60,7 +51,7 @@ function GoogleMapLocation() {
           anchor: new google.maps.Point(17, 66),
           scaledSize: new google.maps.Size(60, 60),
         }}
-        position={{ lat: 37.1253351, lng: -8.5200361 }}
+        position={{ lat: 37.1253351, lng: -8.5400361 }}
       />
 
       {formSubmitted && (

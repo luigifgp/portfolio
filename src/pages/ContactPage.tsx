@@ -7,7 +7,7 @@ import { IoLocationSharp } from "react-icons/io5";
 const ContactPage: React.FunctionComponent = () => {
   return (
     <div className="contactpage">
-      <div className="grid grid-flow-row gap-0 items-center p-10 xl:p-0 ">
+      <div className="grid grid-flow-row gap-0  items-center p-10 xl:pl-0 ">
         <ContactTitle />
         <ContactForm />
       </div>
