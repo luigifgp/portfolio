@@ -1,0 +1,86 @@
+import React from "react";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { MapStyles } from "./GoogleMapStyles";
+import { getFormSubmittedSlector } from "../../store/selectors";
+import { useSelector } from "react-redux";
+import { FcSearch } from "react-icons/fc";
+
+const containerStyle = {
+  width: "100%",
+  height: "100%",
+};
+
+const center = {
+  lat: 37.1253351,
+  lng: -8.5200361,
+};
+
+function GoogleMapLocation() {
+  const formSubmitted = useSelector(getFormSubmittedSlector);
+
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyBRllLw_g9NCOiObFW8U1ygl820ObrMTJM",
+  });
+
+  const [map, setMap] = React.useState(null);
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  return isLoaded ? (
+    <GoogleMap
+      options={{
+        styles: MapStyles,
+        streetViewControl: false,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        zoomControl: false,
+      }}
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={6}
+    >
+      <Marker
+        icon={{
+          url: "/svg/marker-luigi.svg",
+          anchor: new google.maps.Point(17, 66),
+          scaledSize: new google.maps.Size(60, 60),
+        }}
+        position={{ lat: 37.1253351, lng: -8.5200361 }}
+      />
+
+      {formSubmitted && (
+        <InfoWindow position={{ lat: 37.2253351, lng: -8.5200361 }}>
+          <div className="h-16  text-center grid justify-items-center">
+            <h1 className="text-lg text-PurpleColor font-Karla font-semibold">
+              Thank you for your message! <br />
+            </h1>
+
+            <h1 className=" text-sm text-PurpleColor font-Karla ">
+              i will check your request as soon as possible.
+            </h1>
+            <FcSearch className="" size={20} />
+          </div>
+        </InfoWindow>
+      )}
+    </GoogleMap>
+  ) : (
+    <></>
+  );
+}
+
+export default GoogleMapLocation;

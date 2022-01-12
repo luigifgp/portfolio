@@ -1,1 +1,2 @@
-declare module "framer-motion/three";
+declare module 'emailjs';
+

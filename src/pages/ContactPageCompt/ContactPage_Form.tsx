@@ -1,10 +1,43 @@
-import React from "react";
+import React, {FormEventHandler, useState} from "react";
+import  emailjs  from "emailjs-com";
+import { useDispatch, useSelector } from 'react-redux';
+import { formSubmitted } from '../../store/action/index';
+import { getFormSubmittedSlector } from '../../store/selectors';
+
+interface MessageForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const ContactForm: React.FunctionComponent = () => {
+
+
+    const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
+
+    const [searchString, setSearchString] = useState<any>("Leave your message here...");
+
+    const dispatch = useDispatch();
+     const getformSubmitted = useSelector(getFormSubmittedSlector);
+
+    const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      setMessageForm(event.currentTarget);
+      emailjs.sendForm("service_5forcpi","template_oj8znrt", messageForm,"user_SujTptGkTYz79uKX8qmE3")
+        .then((res) => {dispatch(formSubmitted(true))})
+        .catch((err) => console.log(err));
+    };
+
+   const handleTextArea = (e: any) => {
+        setSearchString(e.target.value);
+    }
+
+
   return (
-    <div className="p-10  sm:rounded-md w-9/12 bg-DarkModeDark bg-opacity-80 ">
-      <form autoComplete="off" className="grid gap-4" method="POST">
-        <div className="grid grid-flow-col gap-8 ">
+    <div className="p-10 lg:mb-80 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
+      <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
+        <div className="grid grid-flow-col gap-4 ">
           <div className="input_container">
             <input
               autoComplete="off"
@@ -41,9 +74,11 @@ const ContactForm: React.FunctionComponent = () => {
         </div>
         <div className="input_container">
           <textarea
-            autoComplete="off"
+            value={searchString}
+            onChange={handleTextArea}
             name="message"
-            className=" h-72"
+            className=" h-48"
+            cols={3}
             rows={3}
             placeholder="Leave your message here..."
             required
@@ -51,7 +86,7 @@ const ContactForm: React.FunctionComponent = () => {
           <span className="input_span"> </span>
         </div>
         <div className="">
-          <button type="submit" className="button">
+          <button type="submit" disabled={getformSubmitted} className="button">
             Send message!
           </button>
         </div>

@@ -6,7 +6,7 @@ import { sidebarA } from '../../store/action/index';
 import { portfolioState } from '../../store/types/storeTypes';
 
 const HamburgerIcon: React.FunctionComponent = () => {
-  const { sidebar }: portfolioState = useSelector(getSidebarSelector);
+  const {sidebar} : portfolioState = useSelector(getSidebarSelector);
   const dispatch = useDispatch();
   return (
     <div className="w-full fixed top-0 left-0 p-10 grid justify-end z-40">

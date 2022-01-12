@@ -23,7 +23,7 @@
   }
 
   .button {
-  @apply  mt-12 animate-pulse text-sm md:text-lg grid justify-self-start justify-start pl-6 pr-6  lg:pl-14 lg:pr-14 p-2 lg:p-3 text-OrangeColor border-OrangeColor font-bold border-2 hover:text-white hover:animate-none hover:bg-OrangeColor focus:bg-OrangeColor transition-all duration-700;
+  @apply  mt-12 text-sm md:text-lg grid justify-self-start justify-start pl-6 pr-6  lg:pl-14 lg:pr-14 p-2 lg:p-3 text-OrangeColor border-OrangeColor font-bold border-2 hover:text-white hover:animate-none hover:bg-OrangeColor focus:bg-OrangeColor disabled:text-white disabled:bg-OrangeColor transition-all duration-700;
   }
   /* Sidebar */
   .icon_sidebar {
@@ -55,8 +55,10 @@
     @apply text-PaidColor text-xl md:text-2x1 xl:text-4xl font-mono font-bold;
   }
 
+  /* contactPage */
+
   .contactpage {
-    @apply grid grid-flow-col gap-52;
+    @apply grid lg:grid-cols-2 lg:gap-10 xl:gap-24 ;
   }
 
   .contactpage input,
@@ -64,7 +66,8 @@
     @apply block  
              w-full
             mt-1
-            p-4
+            p-2
+            md:p-4
             border-none
             border-DarkModelight
             bg-DarkModelight
@@ -73,7 +76,8 @@
             placeholder-gray-400
             text-gray-300
             font-mono
-            font-semibold;
+            font-semibold
+            lg:text-lg md:text-sm text-sm;
   }
 }
 

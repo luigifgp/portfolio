@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
-import sidebarReducer from "./reducers/sidebarReducer";
+import portfolioReducer from "./reducers/portfolioReducer";
 
 
 const rootReducer = combineReducers({
-  sidebar: sidebarReducer,
+  portfolio: portfolioReducer,
 
 });
 
