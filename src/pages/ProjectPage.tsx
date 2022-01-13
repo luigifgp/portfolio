@@ -5,9 +5,9 @@ import ProjectCard from './ProjectPageCompt/Project_Card';
 
 const ProjectPage: React.FunctionComponent = () => {
     return (
-      <div className="grid justify-center items-center justify-items-center">
+      <div className="grid mt-20 lg:mt-10   justify-center items-center justify-items-center">
         <ProjectTittle />
-        <div className="">
+        <div className="mt-10">
           <ProjectCard />
         </div>
       </div>

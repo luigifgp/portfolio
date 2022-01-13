@@ -5,7 +5,7 @@ import Letter from '../../components/Letter';
 const ProjectTittle: React.FunctionComponent = () => {
     return (
         
-      <div>
+      <div className=''>
         <Letter letter="P" className="text-OrangeColor " />
         <Letter letter="r" className="text-OrangeColor" />
         <Letter letter="o" className="text-OrangeColor" />
