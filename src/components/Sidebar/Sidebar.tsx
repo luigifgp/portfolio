@@ -65,10 +65,10 @@ function  SideBar()  {
           ))}
 
           <div className="grid gap-3 grid-flow-col  ">
-            <a href="https://www.linkedin.com/in/luigifgp/" target="_blank">
+            <a href="https://github.com/luigifgp" target="_blank">
               <FaGithub className="icon_sidebar" size="28" />
             </a>
-            <a href="https://github.com/luigifgp" target="_blank">
+            <a href="https://www.linkedin.com/in/luigifgp/" target="_blank">
               <BsLinkedin className="icon_sidebar" size="28" />
             </a>
             <a

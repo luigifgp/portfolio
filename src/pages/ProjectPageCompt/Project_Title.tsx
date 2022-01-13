@@ -4,8 +4,7 @@ import Letter from '../../components/Letter';
 
 const ProjectTittle: React.FunctionComponent = () => {
     return (
-        
-      <div className=''>
+      <div className="cursor-pointer">
         <Letter letter="P" className="text-OrangeColor " />
         <Letter letter="r" className="text-OrangeColor" />
         <Letter letter="o" className="text-OrangeColor" />
@@ -14,7 +13,6 @@ const ProjectTittle: React.FunctionComponent = () => {
         <Letter letter="c" className=" text-OrangeColor" />
         <Letter letter="t" className="text-OrangeColor" />
         <Letter letter="s" className=" text-OrangeColor" />
-        
       </div>
     );
 }
