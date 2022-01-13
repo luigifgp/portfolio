@@ -41,7 +41,7 @@
 
   .homepage_presatation {
     @apply inline-block tracking-tighter xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl  text-4xl 
-    font-medium text-white  hover:text-OrangeColor transition-all duration-200;
+    font-medium text-white  hover:text-OrangeColor transition-all duration-200 cursor-pointer;
   }
   /* aboutPage */
   .aboutpage {
