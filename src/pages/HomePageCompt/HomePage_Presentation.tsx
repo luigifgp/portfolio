@@ -6,12 +6,12 @@ import Letter from '../../components/Letter';
 const Presentation: React.FunctionComponent = () => {
   return (
     <>
-      <div className="xl:text-5xl inline-block">
+      <div className="xl:text-5xl inline-block cursor-pointer">
         <Letter letter="H" className="" />
         <Letter letter="i" className="" />
         <Letter letter="," className="" />
       </div>
-      <div className=" leading-5 ">
+      <div className=" leading-5 cursor-pointer">
         <Letter letter="I" className="" />
         <Letter letter="'" className="" />
         <Letter letter="m" className="" />
@@ -24,7 +24,7 @@ const Presentation: React.FunctionComponent = () => {
         <Letter letter="g" className="" />
         <Letter letter="i" className="" />
         <Letter letter="," className="" />
-        <div className=" leading-none  pt-4">
+        <div className=" leading-none  pt-4 cursor-pointer">
           <Letter letter="J" className="" />
           <Letter letter="u" className="" />
           <Letter letter="n" className="" />
