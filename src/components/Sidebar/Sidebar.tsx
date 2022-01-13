@@ -65,19 +65,22 @@ function  SideBar()  {
           ))}
 
           <div className="grid gap-3 grid-flow-col  ">
-            <a href="">
+            <a href="https://www.linkedin.com/in/luigifgp/" target="_blank">
               <FaGithub className="icon_sidebar" size="28" />
             </a>
-            <a href="">
+            <a href="https://github.com/luigifgp" target="_blank">
               <BsLinkedin className="icon_sidebar" size="28" />
             </a>
-            <a href="https://www.upwork.com/freelancers/~011bd204b1d4f93ef2">
+            <a
+              href="https://www.upwork.com/freelancers/~011bd204b1d4f93ef2"
+              target="_blank"
+            >
               <SiUpwork className="icon_sidebar" size="28" />
             </a>
           </div>
 
           <div className=" grid justify-items-around mt-28   ">
-            <a href="/files/luigi-cv.pdf">
+            <a href="/files/luigi-cv.pdf" target="_blank">
               <svg
                 className="fill-gray-700 hover:fill-PurpleColor transition-all duration-500"
                 viewBox="0 0 50 50"

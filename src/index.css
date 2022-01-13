@@ -41,7 +41,7 @@
 
   .homepage_presatation {
     @apply inline-block tracking-tighter xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl  text-4xl 
-    font-medium text-white hover:text-OrangeColor transition-all duration-200;
+    font-medium text-white  hover:text-OrangeColor transition-all duration-200;
   }
   /* aboutPage */
   .aboutpage {
@@ -83,6 +83,22 @@
             font-semibold
             lg:text-lg md:text-sm text-sm;
   }
+
+  /* projectPage */
+
+  .projectpage{
+
+  }
+
+  .project-card{
+     @apply   duration-500 transition-all rounded-lg   text-center ;
+  }
+  .project-card-button{
+    @apply m-2 lg:text-lg  text-OrangeColor border-OrangeColor rounded-md hover:bg-OrangeColor focus:bg-OrangeColor 
+    font-semibold font-mono border-2 disabled:opacity-20 disabled:bg-PurpleColor disabled:text-white
+    p-2   focus:text-white transition-all  hover:text-white  duration-300 focus:scale-95;
+  }
+
 }
 
 /* xl:pt-60 */
