@@ -5,7 +5,7 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+
 import { MapStyles } from "./GoogleMapStyles";
 import { getFormSubmittedSlector } from "../../store/selectors";
 import { useSelector } from "react-redux";
