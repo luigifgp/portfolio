@@ -9,13 +9,13 @@ const HamburgerIcon: React.FunctionComponent = () => {
   const sidebar: boolean = useSelector(getSidebarSelector);
   const dispatch = useDispatch();
   return (
-    <div className=" fixed  z-30 xl:hidden">
+    <div className=" w-full fixed top-0 left-0  z-30 xl:hidden">
       {/* Hamburger Icon */}
       <button
-        className={` "  bg-DarkModeDark rounded-full top-8 right-5 z-30 relative  w-16 h-12 text-white focus:outline-none " ${
+        className={` " bg-DarkModeDark rounded-full top-8 right-5 z-30 relative  w-16 h-12 text-white focus:outline-none overflow-hidden" ${
           sidebar
             ? "translate-x-44 transition-all duration-700"
-            : "translate-x-0 transition-all duration-300"
+            : "translate-x-0 transition-all duration-100"
         }`}
         onClick={() => dispatch(sidebarA(!sidebar))}
       >

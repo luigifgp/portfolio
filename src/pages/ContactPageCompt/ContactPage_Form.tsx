@@ -18,7 +18,7 @@ const ContactForm: React.FunctionComponent = () => {
 
     const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
 
-    const [searchString, setSearchString] = useState<any>("Leave your message here...");
+    const [searchString, setSearchString] = useState<string>("");
 
     const dispatch = useDispatch();
      const getformSubmitted = useSelector(getFormSubmittedSlector);
@@ -40,12 +40,13 @@ const ContactForm: React.FunctionComponent = () => {
         .catch((err) => console.log(err));
     };
 
-   const handleTextArea = (e: any) => {
-        setSearchString(e.target.value);
-    }
+   const handleTextArea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+     setSearchString(e.target.value);
+   };
 
 
   return (
+    ///REMINDER: Sibebar issue, within top of the form don't let click the form
     <div className="p-6 sm:p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
       <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
         <div className="grid grid-flow-col gap-4 ">
@@ -85,15 +86,18 @@ const ContactForm: React.FunctionComponent = () => {
         </div>
         <div className="input_container">
           <textarea
+            onClick={() => setSearchString(" ")}
+            onFocus={() => setSearchString("")}
+            typeof="text"
             value={searchString}
             onChange={handleTextArea}
             name="message"
-            className=" h-72 -mb-8   "
-            cols={3}
-            rows={3}
+            className=" pb-64 -mb-8"
             placeholder="Leave your message here..."
             required
-          ></textarea>
+            rows={5}
+            cols={5}
+          />
           <span className="input_span -mb-8"> </span>
         </div>
         <div className="">
@@ -106,7 +110,7 @@ const ContactForm: React.FunctionComponent = () => {
           </button>
         </div>
       </form>
-      <div>
+      <div className="lg:hidden">
         <ContactPopUp isActive={getformSubmitted && getformSubmitted} />
       </div>
     </div>
