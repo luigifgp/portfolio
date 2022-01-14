@@ -1,6 +1,6 @@
 
 
 export interface portfolioState {
-  sidebar: boolean | undefined;
+  sidebar: boolean ;
   formSubmitted: boolean ;
 }

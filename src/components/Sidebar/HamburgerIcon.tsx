@@ -6,7 +6,7 @@ import { sidebarA } from '../../store/action/index';
 import { portfolioState } from '../../store/types/storeTypes';
 
 const HamburgerIcon: React.FunctionComponent = () => {
-  const {sidebar} : portfolioState = useSelector(getSidebarSelector);
+  const sidebar: boolean = useSelector(getSidebarSelector);
   const dispatch = useDispatch();
   return (
     <div className=" fixed  z-30 xl:hidden">

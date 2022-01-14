@@ -3,7 +3,7 @@ import { AppState } from "./rootReducer";
 import SideBar from '../components/Sidebar/Sidebar';
 
 
-const getSidebar = (state: AppState) => state.portfolio;
+const getSidebar = (state: AppState) => state.portfolio.sidebar;
 
 const getFormSubmitted = (state: AppState) => state.portfolio.formSubmitted;
 

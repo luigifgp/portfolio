@@ -20,11 +20,8 @@ interface Routes {
 
 function  SideBar()  {
 
-  const { sidebar }: portfolioState = useSelector(getSidebarSelector);
-  const [mediaQ, setMediaQ] = useState<MediaQueryList>();
-
+  const sidebar: boolean = useSelector(getSidebarSelector);
  
-
   const routes: Routes[] = [
     { name: "About", link: "/about" },
     { name: "My Skills", link: "/skills" },
@@ -39,8 +36,9 @@ function  SideBar()  {
       {/* ToDo DarkMode bg-white dark */}
 
       <div
-        className={`grid w-44 h-screen bg-DarkModeDark overflow-hidden transition-all duration-500 -translate-x-60  z-50 xl:translate-x-0 ${
-          sidebar ? "translate-x-0" : "-translate-x-60"
+        className={`grid w-44 h-screen bg-DarkModeDark overflow-hidden 
+        transition-all duration-500 -translate-x-60  z-50 xl:translate-x-0 ${
+          sidebar ? "-translate-x-0" : "-translate-x-60"
         }`}
       >
         <div className="h-32 shadow-zinc-900 shadow-lg   ">

@@ -24,6 +24,8 @@ const Animation: React.FunctionComponent<AnimationProps> = (props) => {
     3
   );
 
+
+
   // Hook2: Measure the width of the container element
   const [ref, { width }] = useMeasure();
   // Hook3: Hold items
