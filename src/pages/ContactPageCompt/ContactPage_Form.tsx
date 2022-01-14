@@ -88,16 +88,20 @@ const ContactForm: React.FunctionComponent = () => {
             value={searchString}
             onChange={handleTextArea}
             name="message"
-            className=" h-72 -mb-8"
+            className=" h-72 -mb-8   "
             cols={3}
             rows={3}
             placeholder="Leave your message here..."
             required
           ></textarea>
-          <span className="input_span"> </span>
+          <span className="input_span -mb-8"> </span>
         </div>
         <div className="">
-          <button type="submit" disabled={getformSubmitted} className="lg:px-7 button">
+          <button
+            type="submit"
+            disabled={getformSubmitted}
+            className="lg:px-7 button"
+          >
             Send message!
           </button>
         </div>
