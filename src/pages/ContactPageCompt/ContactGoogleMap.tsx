@@ -63,7 +63,7 @@ function GoogleMapLocation() {
             </h1>
 
             <h1 className=" text-sm text-PurpleColor font-Karla ">
-              i will check your request as soon as possible.
+              i will check your subject matter as soon as possible.
             </h1>
             <FcSearch className="" size={20} />
           </div>
