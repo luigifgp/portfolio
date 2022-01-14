@@ -46,7 +46,7 @@ const ContactForm: React.FunctionComponent = () => {
 
 
   return (
-    <div className="p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
+    <div className="p-6 sm:p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
       <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
         <div className="grid grid-flow-col gap-4 ">
           <div className="input_container">
@@ -88,7 +88,7 @@ const ContactForm: React.FunctionComponent = () => {
             value={searchString}
             onChange={handleTextArea}
             name="message"
-            className=" h-72"
+            className=" h-72 -mb-8"
             cols={3}
             rows={3}
             placeholder="Leave your message here..."
@@ -97,7 +97,7 @@ const ContactForm: React.FunctionComponent = () => {
           <span className="input_span"> </span>
         </div>
         <div className="">
-          <button type="submit" disabled={getformSubmitted} className="button">
+          <button type="submit" disabled={getformSubmitted} className="lg:px-7 button">
             Send message!
           </button>
         </div>

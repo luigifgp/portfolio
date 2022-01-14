@@ -10,7 +10,7 @@ export interface CardProjectData {
 export const Projects: CardProjectData[] = [
   {
     img: "/project-img/project1.png",
-    title: "clothes sell web",
+    title: "Clothes Sell Web",
     content:
       "A website to sell clothes, the customers are able to add them wishes clothes to a car and pay for them.",
     languages: ["SCSS", "REACT", "JAVASCRIPT", "FIREBASE", "STRIPE", "REDUX"],
@@ -19,7 +19,7 @@ export const Projects: CardProjectData[] = [
   },
   {
     img: "/project-img/project2.png",
-    title: "User Framework with typescript",
+    title: "User Framework with Typescript",
     content:
       "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
     languages: ["TYPESCRIPT", "HTML"],
@@ -37,7 +37,6 @@ export const Projects: CardProjectData[] = [
       "REACT",
       "STRIPE",
       "FIREBASE",
-      "EXPRESSJS",
       "REDUX",
     ],
     urlcode: "https://github.com/luigifgp/coaching-workout-app",
@@ -45,7 +44,7 @@ export const Projects: CardProjectData[] = [
   },
   {
     img: "/project-img/project4.png",
-    title: "Analyst Coin app",
+    title: "Analyst Coin App",
     content:
       "A flutter app to watch the prices of your preference coin , you can see the graph and activate and alarm when the price reach the price of your choose.",
     languages: ["FLUTTER", "DART", "CRYPTOCURRENCY", "FIREBASE", "REDUX"],
@@ -54,7 +53,7 @@ export const Projects: CardProjectData[] = [
   },
   {
     img: "/project-img/project5.png",
-    title: "Youtube copy",
+    title: "Youtube Copy",
     content:
       " I built a youtube copy or some of it. it possible to comment the video, give like or dislike to it .you can follow the creator that you believe has good content. the user profile is allow to change your image profile and upload new videos.",
     languages: [
@@ -71,7 +70,7 @@ export const Projects: CardProjectData[] = [
   },
   {
     img: "/project-img/project6.png",
-    title: "fast scooter",
+    title: "Fast Scooter",
     content:
       "This app can take a excel file  of scooters location a set it on a google map as a marker",
     languages: ["EXPRESSJS", "MONDODB", "SASS", "JAVASCRIPT", "REACT"],

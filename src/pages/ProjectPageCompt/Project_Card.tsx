@@ -11,9 +11,9 @@ const ProjectCard: React.FunctionComponent = () => {
 
   return (
     <div className="container duration-700 transition-all">
-      <div className="flex flex-wrap -mx-4 ">
+      <div className="flex flex-wrap -mx-10 lg:-mx-4 ">
         {data.map((projects) => (
-          <div className="w-full md:w-1/2 xl:w-1/3  px-10">
+          <div className="w-full md:w-1/2 xl:w-1/3   px-8">
             <div className="bg-DarkModeDark rounded-lg overflow-hidden mb-10 shadow-2xl shadow-black hover:shadow-md  hover:shadow-orange-400 duration-500 transition-all">
               <img
                 src={projects.img}
@@ -51,14 +51,14 @@ const ProjectCard: React.FunctionComponent = () => {
 
                 <div className=" py-2   ">
                   <a aria-disabled href={projects.urlcode} target="_blank">
-                    <button className="project-card-button">
-                      {" "}
+                    <button className=" project-card-button">
+                      
                       Source Code
                     </button>
                   </a>
 
                   <a href={projects.urlDemo} target="_blank">
-                    <button className="project-card-button">Live Demo</button>
+                    <button className=" project-card-button">Live Demo</button>
                   </a>
                 </div>
               </div>

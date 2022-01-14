@@ -62,7 +62,7 @@
   /* contactPage */
 
   .contactpage {
-    @apply grid lg:grid-cols-2 lg:gap-10 xl:gap-10 ;
+    @apply grid lg:grid-cols-2  gap-10  transition-all duration-300  ;
   }
 
   .contactpage input,
@@ -94,14 +94,15 @@
      @apply   duration-500 transition-all rounded-lg   text-center ;
   }
   .project-card-button{
-    @apply m-2 lg:text-lg  text-OrangeColor border-OrangeColor rounded-md hover:bg-OrangeColor focus:bg-OrangeColor 
+    @apply m-2 lg:text-lg   text-OrangeColor border-OrangeColor rounded-md hover:bg-OrangeColor focus:bg-OrangeColor 
     font-semibold font-mono border-2 disabled:opacity-20 disabled:bg-PurpleColor disabled:text-white
     p-2   focus:text-white transition-all  hover:text-white  duration-300 focus:scale-95;
   }
 
 }
 
-/* xl:pt-60 */
+
+/*contactpage: contact form  */
 
 .input_container {
   display: inline-block;

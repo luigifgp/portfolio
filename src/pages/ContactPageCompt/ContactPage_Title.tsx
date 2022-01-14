@@ -3,7 +3,7 @@ import Letter from '../../components/Letter';
 
 const ContactTitle:React.FunctionComponent = () => {
     return (
-      <div className="  ">
+      <div className="   ">
         <Letter letter="C" className="text-OrangeColor " />
         <Letter letter="o" className="text-OrangeColor" />
         <Letter letter="n" className="text-OrangeColor" />
