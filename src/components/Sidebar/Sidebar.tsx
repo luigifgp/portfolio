@@ -38,7 +38,9 @@ function  SideBar()  {
       <div
         className={`grid w-44 h-screen bg-DarkModeDark overflow-hidden 
         transition-all duration-500 -translate-x-60  z-50 xl:translate-x-0 ${
-          sidebar ? "-translate-x-0" : "-translate-x-60"
+          sidebar
+            ? "-translate-x-0 transition-all duration-700"
+            : "-translate-x-60 transition-all duration-300"
         }`}
       >
         <div className="h-32 shadow-zinc-900 shadow-lg   ">
