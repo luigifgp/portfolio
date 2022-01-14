@@ -6,16 +6,16 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const ContactPage: React.FunctionComponent = () => {
   return (
-    <div className="contactpage ">
-      <div className="grid  mt-14 lg:mt-12 xl:gap-2 ">
+    <div className="contactpage pr-4">
+      <div className="grid   mt-14 lg:mt-12 xl:gap-2 ">
         <div className=" grid justify-center lg:pl-8 lg:justify-start">
           <ContactTitle />
         </div>
-        <div className="pr-4 sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4">
+        <div className=" sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4">
           <ContactForm />
         </div>
       </div>
-      <div className="h-screen  pr-4 sm:px-6 lg:p-0  leading-6 relative">
+      <div className="h-screen   sm:px-6 lg:p-0  leading-6 relative">
         <div className=" bg-PurpleColor bg-opacity-80  lg:w-80 w-44 h-26 p-4 rounded-md text-center absolute z-20 left-9 top-10">
           <div className="grid grid-flow-col">
             <IoLocationSharp className=" fill-slate-200" size={20} />
