@@ -15,15 +15,16 @@ interface MessageForm {
 
 const ContactForm: React.FunctionComponent = () => {
 
+      
+      const getformSubmitted = useSelector(getFormSubmittedSlector);
+      const dispatch = useDispatch();
+      const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
 
-    const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
+      const [searchString, setSearchString] = useState<string>("");
 
-    const [searchString, setSearchString] = useState<string>("");
+      const [activeModal, setActiveModal] = useState<boolean>(false);
 
-    const dispatch = useDispatch();
-     const getformSubmitted = useSelector(getFormSubmittedSlector);
-
-    const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
        
       event.preventDefault();
       setMessageForm(event.currentTarget);
@@ -36,6 +37,8 @@ const ContactForm: React.FunctionComponent = () => {
         )
         .then((res) => {
            dispatch(formSubmitted(true));
+            setActiveModal(true) 
+            setTimeout(() => {setActiveModal(false)}, 2000);
         })
         .catch((err) => console.log(err));
     };
@@ -43,6 +46,10 @@ const ContactForm: React.FunctionComponent = () => {
    const handleTextArea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
      setSearchString(e.target.value);
    };
+
+   //modal behaviour close
+
+   
 
 
   return (
@@ -110,8 +117,8 @@ const ContactForm: React.FunctionComponent = () => {
           </button>
         </div>
       </form>
-      <div className="lg:hidden">
-        <ContactPopUp isActive={getformSubmitted && getformSubmitted} />
+      <div className="">
+        <ContactPopUp isActive={activeModal} />
       </div>
     </div>
   );

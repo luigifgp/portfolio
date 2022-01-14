@@ -54,7 +54,7 @@ const ContactPopUp: React.FunctionComponent<ContactPopupProps> = (props) => {
             </h1>
           </div>
           <p className="text-center content" id="modal-modal-description">
-            I will check your email as soon as possible.
+            I will check your message as soon as possible.
           </p>
         </Box>
       </Modal>

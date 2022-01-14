@@ -143,3 +143,14 @@ textarea:focus {
   width: 100%;
 }
 
+
+/* contact form input */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-text-fill-color: #FFFFFF;
+    -webkit-box-shadow: 0 0 0 30px #27272C inset !important;
+    ;
+}
