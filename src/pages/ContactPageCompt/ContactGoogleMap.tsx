@@ -36,6 +36,7 @@ function GoogleMapLocation() {
     <GoogleMap
       options={{
         styles: MapStyles,
+        mapId: process.env.REACT_APP_MAPID,
         streetViewControl: false,
         mapTypeControl: false,
         fullscreenControl: false,
