@@ -5,8 +5,12 @@ import shuffle from "lodash.shuffle";
 import useMedia from "./useMedia";
 import data from "./SkillsData";
 
+interface AnimationProps {
+  hoverSkills: boolean;
+}
 
-function Animation() {
+
+const Animation: React.FunctionComponent<AnimationProps> = (props) => {
   // Hook1: Tie media queries to the number of columns
   const columns = useMedia(
     [
@@ -19,15 +23,19 @@ function Animation() {
     [5, 4, 5, 4, 4],
     3
   );
+
   // Hook2: Measure the width of the container element
   const [ref, { width }] = useMeasure();
   // Hook3: Hold items
   const [items, set] = useState(data);
   // Hook4: shuffle data every 2 seconds
   useEffect(() => {
-    const t = setInterval(() => set(shuffle), 2000);
-    return () => clearInterval(t);
-  }, []);
+    if (props.hoverSkills) return;
+    else {
+      const t = setInterval(() => set(shuffle), 2000);
+      return () => clearInterval(t);
+    }
+  }, [props.hoverSkills]);
   // Hook5: Form a grid of stacked items using width & columns we got from hooks 1 & 2
   const [heights, gridItems] = useMemo(() => {
     let heights = new Array(columns).fill(0); // Each column gets a height starting with zero
@@ -57,15 +65,10 @@ function Animation() {
   });
   // Render the grid
   return (
-    <div
-      ref={ref}
-      className={"list"}
-      style={{ height: Math.max(...heights) }}
-    >
+    <div ref={ref} className={"list"} style={{ height: Math.max(...heights) }}>
       {transitions((style, item) => (
         <a.div style={style}>
           <div
-           
             style={{
               backgroundImage: `url(${item.css}?auto=compress&dpr=2&h=500&w=500)`,
             }}
@@ -74,6 +77,6 @@ function Animation() {
       ))}
     </div>
   );
-}
+};
 
 export default Animation;

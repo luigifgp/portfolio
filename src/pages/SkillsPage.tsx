@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProgressBar from '../components/ProgressBar';
 
 import SkillsTitle from './SkillsPageCompt/SkillsPage_Title';
@@ -6,6 +6,11 @@ import Animation from './SkillsPageCompt/SkillsAnimation';
 
 const SkillsPage:React.FunctionComponent =  () => {
 
+    const [hoverSkills, setHoverSkills] = useState<boolean>(false);
+
+     const getHoverSkillDiv = (getHoverSkillDiv: boolean) => {
+       setHoverSkills(getHoverSkillDiv);
+     };
 
     return (
       <div className="skillpage  ">
@@ -62,8 +67,17 @@ const SkillsPage:React.FunctionComponent =  () => {
             </div>
             <div className="grid gap-10 xl:gap-5">
               <h1>Languages & Framework</h1>
-              <div className=" m-0 sm:ml-0 md:ml-28 lg:ml-36 xl:m-0 md:w-8/12 lg:-w-auto xl:w-auto  w-auto sm:p-0  ">
-                <Animation />
+
+              <div className="relative m-0 sm:ml-0 md:ml-28 lg:ml-36 xl:m-0 md:w-8/12 lg:-w-auto xl:w-auto  w-auto sm:p-0  ">
+                <h1
+                  onMouseOver={() => getHoverSkillDiv(true)}
+                  onMouseOut={() => getHoverSkillDiv(false)}
+                  className="!text-white opacity-60 absolute hover:opacity-0 bg-black rounded-full p-4 top-1/2 
+                left-1/2 duration-500 transform -translate-x-1/2 -translate-y-1/2 z-40"
+                >
+                  HOVER ME
+                </h1>
+                <Animation hoverSkills={hoverSkills} />
               </div>
             </div>
           </div>
