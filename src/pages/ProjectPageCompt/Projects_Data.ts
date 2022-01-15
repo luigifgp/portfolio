@@ -18,12 +18,12 @@ export const Projects: CardProjectData[] = [
     urlDemo: "",
   },
   {
-    img: "/project-img/project2.png",
-    title: "User Framework with Typescript",
+    img: "/project-img/project4-4.png",
+    title: "Analyst Coin App",
     content:
-      "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
-    languages: ["TYPESCRIPT", "HTML"],
-    urlcode: "https://github.com/luigifgp/user-Framework-TS",
+      "A flutter app to watch the prices of your preference coin , you can see the graph and activate and alarm when the price reach the price of your choose.",
+    languages: ["FLUTTER", "DART", "CRYPTOCURRENCY", "FIREBASE", "REDUX"],
+    urlcode: "https://github.com/luigifgp/analyst_coin_app",
     urlDemo: "",
   },
   {
@@ -43,14 +43,15 @@ export const Projects: CardProjectData[] = [
     urlDemo: "",
   },
   {
-    img: "/project-img/project4.png",
-    title: "Analyst Coin App",
+    img: "/project-img/project2.png",
+    title: "User Framework with Typescript",
     content:
-      "A flutter app to watch the prices of your preference coin , you can see the graph and activate and alarm when the price reach the price of your choose.",
-    languages: ["FLUTTER", "DART", "CRYPTOCURRENCY", "FIREBASE", "REDUX"],
-    urlcode: "https://github.com/luigifgp/analyst_coin_app",
+      "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
+    languages: ["TYPESCRIPT", "HTML"],
+    urlcode: "https://github.com/luigifgp/user-Framework-TS",
     urlDemo: "",
   },
+
   {
     img: "/project-img/project5.png",
     title: "Youtube Copy",

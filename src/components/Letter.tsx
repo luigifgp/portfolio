@@ -10,13 +10,17 @@ const Letter:React.FunctionComponent<letter> = (props) => {
 
   const active = activeLetter ? "animate-wiggle" : "";
 
+
   return (
     <span
       onMouseEnter={() => setActiveLetter(!activeLetter)}
-      onMouseLeave={() =>  setTimeout(() => {activeLetter && setActiveLetter(!activeLetter); }, 10000)}
-      className={
-        `homepage_presatation
-          ${props.className } ${active}`}
+      onMouseLeave={() =>
+        setTimeout(() => {
+          activeLetter && setActiveLetter(!activeLetter);
+        }, 10000)
+      }
+      className={`homepage_presatation noselect
+          ${props.className} ${active}`}
     >
       {props.letter}
     </span>
