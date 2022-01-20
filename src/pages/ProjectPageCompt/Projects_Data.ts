@@ -5,6 +5,7 @@ export interface CardProjectData {
   languages: string[];
   urlcode: string;
   urlDemo: string;
+  haveUrlDemo: boolean;
 }
 
 export const Projects: CardProjectData[] = [
@@ -16,6 +17,7 @@ export const Projects: CardProjectData[] = [
     languages: ["SCSS", "REACT", "JAVASCRIPT", "FIREBASE", "STRIPE", "REDUX"],
     urlcode: "https://github.com/luigifgp/clothes_sell_web",
     urlDemo: "",
+    haveUrlDemo: true,
   },
   {
     img: "/project-img/project4-4.png",
@@ -25,6 +27,7 @@ export const Projects: CardProjectData[] = [
     languages: ["FLUTTER", "DART", "CRYPTOCURRENCY", "FIREBASE", "REDUX"],
     urlcode: "https://github.com/luigifgp/analyst_coin_app",
     urlDemo: "",
+    haveUrlDemo: true,
   },
   {
     img: "/project-img/project3.png",
@@ -40,7 +43,8 @@ export const Projects: CardProjectData[] = [
       "REDUX",
     ],
     urlcode: "https://github.com/luigifgp/coaching-workout-app",
-    urlDemo: "",
+    urlDemo: "http://107.21.192.126/",
+    haveUrlDemo: false,
   },
   {
     img: "/project-img/project2.png",
@@ -50,6 +54,7 @@ export const Projects: CardProjectData[] = [
     languages: ["TYPESCRIPT", "HTML"],
     urlcode: "https://github.com/luigifgp/user-Framework-TS",
     urlDemo: "",
+    haveUrlDemo: true,
   },
 
   {
@@ -68,6 +73,7 @@ export const Projects: CardProjectData[] = [
     ],
     urlcode: "https://github.com/luigifgp/videos-web-app",
     urlDemo: "https://vimeo.com/654711334",
+    haveUrlDemo: false,
   },
   {
     img: "/project-img/project6.png",
@@ -77,6 +83,7 @@ export const Projects: CardProjectData[] = [
     languages: ["EXPRESSJS", "MONDODB", "SASS", "JAVASCRIPT", "REACT"],
     urlcode: "https://github.com/luigifgp/fast-scooter",
     urlDemo: "",
+    haveUrlDemo: true,
   },
 ];
 

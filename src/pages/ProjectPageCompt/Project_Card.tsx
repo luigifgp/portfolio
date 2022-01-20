@@ -57,8 +57,8 @@ const ProjectCard: React.FunctionComponent = () => {
                     </button>
                   </a>
 
-                  <a href={projects.urlDemo} target="_blank">
-                    <button className=" project-card-button">Live Demo</button>
+                  <a href={projects.urlDemo }  target="_blank">
+                    <button disabled={projects.haveUrlDemo} className=" project-card-button">Live Demo</button>
                   </a>
                 </div>
               </div>
