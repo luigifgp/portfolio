@@ -15,27 +15,25 @@ const Letter:React.FunctionComponent<letter> = (props) => {
   
 
   return (
-   
-      <span
-        onMouseEnter={() => setActiveLetter(!activeLetter)}
-        onMouseLeave={() =>
-          setTimeout(() => {
-            activeLetter && setActiveLetter(!activeLetter);
-          }, 10000)
-        }
-        className={`homepage_presatation noselect
+    <span
+      onMouseEnter={() => setActiveLetter(!activeLetter)}
+      onMouseLeave={() =>
+        setTimeout(() => {
+          activeLetter && setActiveLetter(!activeLetter);
+        }, 10000)
+      }
+      className={`homepage_presatation noselect
           ${props.className} ${active}`}
-      >
-         <Animated
-      animationIn="fadeInLeft"
-      animationOut="bounceOutRight"
-      animationInDuration={props.duration}
-      isVisible={true}
     >
+      <Animated
+        animationIn="bounceIn"
+        animationOut="bounceOutRight"
+        animationInDuration={props.duration}
+        isVisible={true}
+      >
         {props.letter}
-           </Animated>
-      </span>
- 
+      </Animated>
+    </span>
   );
 };
 

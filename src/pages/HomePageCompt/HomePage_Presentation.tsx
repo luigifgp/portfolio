@@ -18,7 +18,7 @@ const Presentation: React.FunctionComponent = () => {
         <img
           alt="logo"
           src="svg/logo-luigi.svg"
-          className="ml-2 md:ml-4 h-10 w-10 sm:h-16 sm:w-16 sm:-mt-14 md:h-20 md:w-20 md:-mt-20 lg:w-24 lg:h-24 lg:  -mt-7   inline-block hover:-translate-y-12 hover:animate-wiggle transition-all"
+          className="ml-2 md:ml-4 h-10 w-10 sm:h-16 sm:w-16 sm:-mt-14 md:h-20 md:w-20 md:-mt-20 lg:w-24 lg:h-24 lg:  -mt-7   inline-block hover:-translate-y-12 hover:animate-wiggle transition-all  "
         />
         <Letter letter="u" className="" duration={1300} />
         <Letter letter="i" className="" duration={1350} />
