@@ -1,18 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
+import ModalPopUp from "../../components/Modal";
 import { Projects, CardProjectData } from './Projects_Data';
+import ProjectVideo from './Project_Video';
+import { useDispatch } from 'react-redux';
+import { modalOpen } from '../../store/action/index';
 
 
-
-const datas = ["HTML", "TAILWIND", "REACT", "TYPESCRIPT", "NODEJS"];
 
 const ProjectCard: React.FunctionComponent = () => {
 
   const data: CardProjectData[] = Projects;
 
+  const dispatch = useDispatch(); 
+
+
+  ///video modal handle
+  const [getIndex, setGetIndex] = useState<number | null>(null);
+  const activeModal = (index: number, isActive: boolean) => {
+      setGetIndex(index);
+      dispatch(modalOpen(isActive));
+  }
+
   return (
     <div className="container duration-700 transition-all">
       <div className="flex flex-wrap -mx-10 lg:-mx-4 ">
-        {data.map((projects) => (
+        {data.map((projects, index) => (
           <div className="w-full md:w-1/2 xl:w-1/3   px-8">
             <div className="bg-DarkModeDark rounded-lg overflow-hidden mb-10 shadow-2xl shadow-black hover:shadow-md  hover:shadow-orange-400 duration-500 transition-all">
               <img
@@ -52,17 +64,35 @@ const ProjectCard: React.FunctionComponent = () => {
                 <div className=" py-2   ">
                   <a aria-disabled href={projects.urlcode} target="_blank">
                     <button className=" project-card-button">
-                      
                       Source Code
                     </button>
                   </a>
-
-                  <a href={projects.urlDemo }  target="_blank">
-                    <button disabled={projects.haveUrlDemo} className=" project-card-button">Live Demo</button>
-                  </a>
+                  
+                  {/* if exist Video URL show a video Demo Button */}
+                  {!projects.urlDemoVideo ? (
+                    <a href={projects.urlDemo} target="_blank">
+                      <button
+                        disabled={projects.haveUrlDemo}
+                        className="project-card-button"
+                      >
+                        Live Demo
+                      </button>
+                    </a>
+                  ) : (
+                    <button
+                      disabled={projects.haveUrlDemo}
+                      onClick={() => activeModal(index, true)}
+                      className="project-card-button"
+                    >
+                      Video Demo
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
+            {getIndex === index && (
+              <ModalPopUp box={<ProjectVideo url={projects?.urlDemoVideo} />} />
+            )}
           </div>
         ))}
       </div>

@@ -1,9 +1,10 @@
-import React, {FormEventHandler, useState} from "react";
+import React, {useState} from "react";
 import  emailjs  from "emailjs-com";
 import { useDispatch, useSelector } from 'react-redux';
-import { formSubmitted } from '../../store/action/index';
+import { formSubmitted, modalOpen } from '../../store/action/index';
 import { getFormSubmittedSlector } from '../../store/selectors';
 import ContactPopUp from "./ContactPopup";
+import ModalPopUp from "../../components/Modal";
 
 
 interface MessageForm {
@@ -15,18 +16,20 @@ interface MessageForm {
 
 const ContactForm: React.FunctionComponent = () => {
 
-      
+
       const getformSubmitted = useSelector(getFormSubmittedSlector);
       const dispatch = useDispatch();
-      const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
+  
 
+      ///Form handle
+      const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
       const [searchString, setSearchString] = useState<string>("");
 
-      const [activeModal, setActiveModal] = useState<boolean>(false);
 
       const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-       
       event.preventDefault();
+
+      /// send message by emailjs to an email
       setMessageForm(event.currentTarget);
       emailjs
         .sendForm(
@@ -37,8 +40,8 @@ const ContactForm: React.FunctionComponent = () => {
         )
         .then((res) => {
            dispatch(formSubmitted(true));
-            setActiveModal(true) 
-            setTimeout(() => {setActiveModal(false)}, 2000);
+            dispatch(modalOpen(true))
+            setTimeout(() => {dispatch(modalOpen(false))}, 2000);
         })
         .catch((err) => console.log(err));
     };
@@ -47,13 +50,9 @@ const ContactForm: React.FunctionComponent = () => {
      setSearchString(e.target.value);
    };
 
-   //modal behaviour close
 
    
-
-
   return (
-    ///REMINDER: Sibebar issue, within top of the form don't let click the form
     <div className="p-6 sm:p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
       <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
         <div className="grid grid-flow-col gap-4 ">
@@ -118,7 +117,7 @@ const ContactForm: React.FunctionComponent = () => {
         </div>
       </form>
       <div className="">
-        <ContactPopUp isActive={activeModal} />
+        <ModalPopUp  box={<ContactPopUp/>} />
       </div>
     </div>
   );

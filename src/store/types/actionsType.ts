@@ -11,8 +11,14 @@ export interface FormSubmittedAction {
   formSubmitted: boolean;
 }
 
+export interface ModalOpenAction{
+  type: "MODAL_OPEN",
+  modalOpen: boolean;
+
+}
 
 export const actionIds = {
   SIDEBAR_ACTIVE: "SIDEBAR_ACTIVE",
   FORM_SUBMITTED: "FORM_SUBMITTED",
+  MODAL_OPEN: "MODAL_OPEN",
 };

@@ -1,3 +1,4 @@
+import { modalOpenActionCreator } from '../types/actionsCreatorTypes';
 import {
   sidebarActionCreator,
   formSubmittedActionCreator,
@@ -17,3 +18,10 @@ export const formSubmitted: formSubmittedActionCreator = (formSubmitted) => {
     formSubmitted,
   };
 };
+
+export const modalOpen: modalOpenActionCreator = (modalOpen) => {
+  return {
+    type: "MODAL_OPEN",
+    modalOpen,
+  }
+}

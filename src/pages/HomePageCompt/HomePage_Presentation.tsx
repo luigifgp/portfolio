@@ -1,5 +1,5 @@
 import React,{MouseEvent, useState} from 'react';
-import Letter from '../../components/Letter';
+import Letter from '../../components/AnimatedLetter';
 
 
 

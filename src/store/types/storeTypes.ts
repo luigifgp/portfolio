@@ -2,5 +2,6 @@
 
 export interface portfolioState {
   sidebar: boolean ;
-  formSubmitted: boolean ;
+  formSubmitted: boolean;
+  modalOpen: boolean;
 }

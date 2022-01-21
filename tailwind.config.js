@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const { scale } = require("tailwindcss/defaultTheme");
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -210,6 +211,9 @@ module.exports = {
     extend: {
       animation: {
         wiggle: "rubberBand 1s both ",
+        growWidth: "growWidth 1.2s both",
+        growVertical: "growvertical 1.5s both ",
+        growHorizontal: "growHorizontal 2s both",
       },
       keyframes: {
         rubberBand: {
@@ -233,6 +237,30 @@ module.exports = {
           },
           "100%": {
             transform: "scale3d(1, 1, 1)",
+          },
+        },
+        growWidth: {
+          "0%": {
+            transform: "scale(0)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+        growvertical: {
+          "0%": {
+            transform: "scaleY(0)",
+          },
+          "100%": {
+            transform: "scaleY(1)",
+          },
+        },
+        growHorizontal: {
+          "0%": {
+            transform: "scaleX(0)",
+          },
+          "100%": {
+            transform: "scaleX(1)",
           },
         },
       },

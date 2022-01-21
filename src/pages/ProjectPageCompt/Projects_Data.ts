@@ -5,6 +5,7 @@ export interface CardProjectData {
   languages: string[];
   urlcode: string;
   urlDemo: string;
+  urlDemoVideo?: string;
   haveUrlDemo: boolean;
 }
 
@@ -27,7 +28,8 @@ export const Projects: CardProjectData[] = [
     languages: ["FLUTTER", "DART", "CRYPTOCURRENCY", "FIREBASE", "REDUX"],
     urlcode: "https://github.com/luigifgp/analyst_coin_app",
     urlDemo: "",
-    haveUrlDemo: true,
+    urlDemoVideo: "https://youtu.be/Jx6ODBcA_Bg",
+    haveUrlDemo: false,
   },
   {
     img: "/project-img/project3.png",
@@ -53,8 +55,8 @@ export const Projects: CardProjectData[] = [
       "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
     languages: ["TYPESCRIPT", "HTML"],
     urlcode: "https://github.com/luigifgp/user-Framework-TS",
-    urlDemo: "",
-    haveUrlDemo: true,
+    urlDemo: "http://3.89.103.98/",
+    haveUrlDemo: false,
   },
 
   {
@@ -72,7 +74,8 @@ export const Projects: CardProjectData[] = [
       "AWS BUCKET",
     ],
     urlcode: "https://github.com/luigifgp/videos-web-app",
-    urlDemo: "https://vimeo.com/654711334",
+    urlDemo: "",
+    urlDemoVideo: "https://youtu.be/2prCA1hNRok",
     haveUrlDemo: false,
   },
   {
@@ -87,4 +90,3 @@ export const Projects: CardProjectData[] = [
   },
 ];
 
-//it has a subscription side that was assembled with firebase cloud and the payment methods were used stripe.js.
