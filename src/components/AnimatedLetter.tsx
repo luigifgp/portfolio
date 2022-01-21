@@ -1,8 +1,10 @@
-import react,{useState} from 'react';
+import React, {useState} from 'react';
+import { Animated } from "react-animated-css";
 
 interface letter {
     letter: string;
     className: string;
+    duration: number;
 }
 
 const Letter:React.FunctionComponent<letter> = (props) => {
@@ -10,20 +12,30 @@ const Letter:React.FunctionComponent<letter> = (props) => {
 
   const active = activeLetter ? "animate-wiggle" : "";
 
+  
 
   return (
-    <span
-      onMouseEnter={() => setActiveLetter(!activeLetter)}
-      onMouseLeave={() =>
-        setTimeout(() => {
-          activeLetter && setActiveLetter(!activeLetter);
-        }, 10000)
-      }
-      className={`homepage_presatation noselect
+   
+      <span
+        onMouseEnter={() => setActiveLetter(!activeLetter)}
+        onMouseLeave={() =>
+          setTimeout(() => {
+            activeLetter && setActiveLetter(!activeLetter);
+          }, 10000)
+        }
+        className={`homepage_presatation noselect
           ${props.className} ${active}`}
+      >
+         <Animated
+      animationIn="fadeInLeft"
+      animationOut="bounceOutRight"
+      animationInDuration={props.duration}
+      isVisible={true}
     >
-      {props.letter}
-    </span>
+        {props.letter}
+           </Animated>
+      </span>
+ 
   );
 };
 

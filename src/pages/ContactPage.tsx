@@ -11,12 +11,12 @@ const ContactPage: React.FunctionComponent = () => {
         <div className=" grid justify-center lg:pl-8 lg:justify-start">
           <ContactTitle />
         </div>
-        <div className=" sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4">
+        <div className=" sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4 animate-growWidth ">
           <ContactForm />
         </div>
       </div>
       <div className="h-screen   sm:px-6 lg:p-0  leading-6 relative">
-        <div className=" bg-PurpleColor bg-opacity-80  lg:w-80 w-44 h-26 p-4 rounded-md text-center absolute z-20 left-9 top-10">
+        <div className=" bg-PurpleColor bg-opacity-80  lg:w-80 w-44 h-26 p-4 rounded-md text-center absolute z-20 left-9 top-10 animate-growWidth origin-right">
           <div className="grid grid-flow-col">
             <IoLocationSharp className=" fill-slate-200" size={20} />
             <p className="lg:text-lg md:text-sm text-sm text-white">

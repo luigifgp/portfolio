@@ -46,7 +46,7 @@ const SkillsPage:React.FunctionComponent =  () => {
         <div className="grid grid-flow-row items-center xl:w-auto">
           <div className="grid grid-flow-row xl:pt-8 gap-5 xl:pr-32  ">
             <div className="grid gap-2 lg:gap-5 items-start pr-10 xl:w-auto w-9/12">
-              <h1>Idioms</h1>
+              <h1 className="animate-growHorizontal origin-left">Idioms</h1>
               <div className="">
                 <ProgressBar
                   title="Spanish"
@@ -66,7 +66,9 @@ const SkillsPage:React.FunctionComponent =  () => {
               </div>
             </div>
             <div className="grid gap-10 xl:gap-5">
-              <h1>Languages & Framework</h1>
+              <h1 className="animate-growHorizontal origin-left">
+                Languages & Framework
+              </h1>
 
               <div className="relative m-0 sm:ml-0 md:ml-28 lg:ml-36 xl:m-0 md:w-8/12 lg:-w-auto xl:w-auto  w-auto sm:p-0  ">
                 <h1

@@ -13,7 +13,7 @@ const ProgressBar: React.FunctionComponent<progressBar> = (props) => {
       <p className=" text-white lg:text-2x1 text-sm"> {props.title} </p>
       <div className=" bg-gray-200 h-1 mb-6 rounded-xl">
         <div
-          className={` ${props.color} h-1 rounded-xl`}
+          className={` ${props.color} h-1 rounded-xl animate-growHorizontal origin-left`}
           style={{ width: `${props.width}` }}
         ></div>
       </div>

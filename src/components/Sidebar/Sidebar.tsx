@@ -42,7 +42,7 @@ const SideBar: React.FunctionComponent = () => {
         }`}
         >
           <div className="h-32 shadow-zinc-900 shadow-lg   ">
-            <a className="grid top-20 justify-items-center" href="/">
+            <a className="grid top-20 justify-items-center hover:scale-105 duration-500 transition-transform" href="/">
               <img
                 className=" w-28 h-28  mt-2"
                 src="/svg/logo-luigi.svg"

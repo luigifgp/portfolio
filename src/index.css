@@ -38,9 +38,9 @@
   .button {
   @apply  mt-12 text-sm md:text-lg grid justify-self-start justify-start pl-6 pr-6  
   lg:pl-14 lg:pr-14 p-2 lg:p-3 text-OrangeColor border-OrangeColor font-bold border-2 
-  hover:text-white hover:animate-none hover:bg-OrangeColor focus:bg-OrangeColor 
+  hover:text-white  hover:bg-OrangeColor focus:bg-OrangeColor active:text-white active:bg-OrangeColor
   disabled:text-white disabled:bg-OrangeColor disabled:bg-opacity-40 transition-all duration-700
-  active:scale-95;
+  active:scale-125 focus:scale-125 animate-growWidth;
   }
   /* Sidebar */
   .icon_sidebar {
@@ -69,7 +69,7 @@
   }
 
   .skillpage h1 {
-    @apply text-PaidColor text-xl md:text-2x1 xl:text-4xl font-mono font-bold;
+    @apply text-PaidColor text-xl md:text-2x1 xl:text-4xl font-mono font-bold ;
   }
 
   /* contactPage */

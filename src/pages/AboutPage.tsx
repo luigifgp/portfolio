@@ -9,9 +9,9 @@ const AboutPage: React.FunctionComponent = () => {
     // ToDo darkmode
     <div className=" aboutpage ">
       <div className="xl:pt-20  ">
-       <AboutTitle/> 
+        <AboutTitle />
         <div className="grid gap-6">
-          <p className="content">
+          <p className="content ">
             Hardworking self learning Fullstack Developer, Bringing forth a
             motivated attitude and a variety of powerful skills. I'm hungry to
             learn about new technologies and always want to find the right tool
@@ -26,7 +26,7 @@ const AboutPage: React.FunctionComponent = () => {
         </div>
       </div>
       <img
-        className=" grid w-[900px] rounded-full"
+        className=" grid w-[900px] rounded-full animate-growWidth"
         src="img/developer-2.gif"
         alt=""
       />
