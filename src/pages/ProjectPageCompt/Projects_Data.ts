@@ -45,7 +45,7 @@ export const Projects: CardProjectData[] = [
       "REDUX",
     ],
     urlcode: "https://github.com/luigifgp/coaching-workout-app",
-    urlDemo: "http://107.21.192.126/",
+    urlDemo: "http://52.91.103.138:3000/",
     haveUrlDemo: false,
   },
   {
@@ -55,7 +55,7 @@ export const Projects: CardProjectData[] = [
       "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
     languages: ["TYPESCRIPT", "HTML"],
     urlcode: "https://github.com/luigifgp/user-Framework-TS",
-    urlDemo: "http://3.89.103.98/",
+    urlDemo: "http://52.91.103.138:1234/",
     haveUrlDemo: false,
   },
 
