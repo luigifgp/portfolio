@@ -21,7 +21,7 @@ export const Projects: CardProjectData[] = [
     haveUrlDemo: true,
   },
   {
-    img: "/project-img/project4-4.png",
+    img: "/project-img/project4.png",
     title: "Analyst Coin App",
     content:
       "A flutter app to watch the prices of your preference coin , you can see the graph and activate and alarm when the price reach the price of your choose.",
