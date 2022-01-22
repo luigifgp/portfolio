@@ -13,6 +13,7 @@ import { FcSearch } from "react-icons/fc";
 
 
 
+
 const containerStyle = {
   width: "100%",
   height: "100%",
@@ -52,13 +53,14 @@ function GoogleMapLocation() {
           anchor: new google.maps.Point(17, 66),
           scaledSize: new google.maps.Size(60, 60),
         }}
+        animation={google.maps.Animation.DROP}
         position={{ lat: 37.1253351, lng: -8.5400361 }}
       />
 
       {formSubmitted && (
         <InfoWindow position={{ lat: 37.2253351, lng: -8.5200361 }}>
           <div className="h-16  text-center grid justify-items-center">
-            <h1 className="text-lg text-PurpleColor font-Karla font-semibold">
+            <h1 className="text-lg text-PurpleColor font-Karla font-semibold duration-500 transition-all">
               Thank you for your message! <br />
             </h1>
 

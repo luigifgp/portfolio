@@ -11,7 +11,7 @@ const ContactPage: React.FunctionComponent = () => {
         <div className=" grid justify-center lg:pl-8 lg:justify-start">
           <ContactTitle />
         </div>
-        <div className=" sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4 animate-growWidth ">
+        <div className=" sm:px-6 lg:pr-0 lg:-mt-14 xl:-mt-4  ">
           <ContactForm />
         </div>
       </div>

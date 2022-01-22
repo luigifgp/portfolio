@@ -214,8 +214,19 @@ module.exports = {
         growWidth: "growWidth 1.2s both",
         growVertical: "growvertical 1.5s both ",
         growHorizontal: "growHorizontal 2s both",
+        fadeInUp: "fadeInUp 1.5s both",
       },
       keyframes: {
+        fadeInUp: {
+          "0%": {
+          opacity: 0,
+          transform: "translate3d(0,100%,0)",
+          },
+          "100%":{
+            transform: "translate3d(0,0,0)",
+            opacity: 1
+            },
+          },
         rubberBand: {
           "0%": {
             transform: "scale3d(1, 1, 1)",
@@ -263,6 +274,7 @@ module.exports = {
             transform: "scaleX(1)",
           },
         },
+        
       },
     },
   },

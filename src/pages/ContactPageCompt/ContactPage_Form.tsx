@@ -56,7 +56,7 @@ const ContactForm: React.FunctionComponent = () => {
     <div className="p-6 sm:p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
       <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
         <div className="grid grid-flow-col gap-4 ">
-          <div className="input_container">
+          <div className="input_container animate-[fadeInUp_1.2s_both]  ">
             <input
               autoComplete="off"
               name="name"
@@ -67,7 +67,7 @@ const ContactForm: React.FunctionComponent = () => {
             />
             <span className="input_span"></span>
           </div>
-          <div className="input_container">
+          <div className="input_container animate-[fadeInUp_1.4s_both] ">
             <input
               autoComplete="off"
               name="email"
@@ -79,7 +79,7 @@ const ContactForm: React.FunctionComponent = () => {
             <span className="input_span"></span>
           </div>
         </div>
-        <div className="input_container">
+        <div className="input_container animate-[fadeInUp_1.6s_both] ">
           <input
             autoComplete="off"
             name="subject"
@@ -90,7 +90,7 @@ const ContactForm: React.FunctionComponent = () => {
           />
           <span className="input_span"></span>
         </div>
-        <div className="input_container">
+        <div className="input_container animate-[fadeInUp_1.8s_both]  ">
           <textarea
             onClick={() => setSearchString(" ")}
             onFocus={() => setSearchString("")}
@@ -106,7 +106,7 @@ const ContactForm: React.FunctionComponent = () => {
           />
           <span className="input_span -mb-8"> </span>
         </div>
-        <div className="">
+        <div className="animate-[fadeInUp_3s_both]  ">
           <button
             type="submit"
             disabled={getformSubmitted}
@@ -117,7 +117,7 @@ const ContactForm: React.FunctionComponent = () => {
         </div>
       </form>
       <div className="">
-        <ModalPopUp  box={<ContactPopUp/>} />
+        <ModalPopUp box={<ContactPopUp />} />
       </div>
     </div>
   );

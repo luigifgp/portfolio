@@ -17,8 +17,8 @@ export const Projects: CardProjectData[] = [
       "A website to sell clothes, the customers are able to add them wishes clothes to a car and pay for them.",
     languages: ["SCSS", "REACT", "JAVASCRIPT", "FIREBASE", "STRIPE", "REDUX"],
     urlcode: "https://github.com/luigifgp/clothes_sell_web",
-    urlDemo: "",
-    haveUrlDemo: true,
+    urlDemo: "http://52.91.103.138:5000/",
+    haveUrlDemo: false,
   },
   {
     img: "/project-img/project4.png",

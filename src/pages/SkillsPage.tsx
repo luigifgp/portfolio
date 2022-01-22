@@ -17,26 +17,26 @@ const SkillsPage:React.FunctionComponent =  () => {
         <div className="xl:pt-60 gap-2 xl:p-16">
           <SkillsTitle />
           <div>
-            <ul className="content list-disc grid gap-1 ">
-              <li>
+            <ul className="content list-disc grid gap-1  ">
+              <li className="animate-[fadeInUp_1s_both] ">
                 Effectively coded software changes and alterations based on
                 specific design specifications.
               </li>
-              <li>
+              <li className="animate-[fadeInUp_2s_both]">
                 Successfully identified diagnosed and fixed website problems
                 including broken links, typographical errors and formatting
                 issues.
               </li>
-              <li>
+              <li className="animate-[fadeInUp_3s_both]">
                 helped to achieve a consistent look and visual theme across the
                 websites by promoting uniform fonts, formatting, images and
                 layout.
               </li>
-              <li>
+              <li className="animate-[fadeInUp_4s_both]">
                 worked to assess competing websites in regards to content, look
                 and feel.
               </li>
-              <li>
+              <li className="animate-[fadeInUp_5s_both]">
                 Effectively multi tasked and worked well with internal and
                 external teams.
               </li>
