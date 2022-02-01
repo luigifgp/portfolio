@@ -70,7 +70,7 @@ const SkillsPage:React.FunctionComponent =  () => {
                 Languages & Framework
               </h1>
 
-              <div className="relative m-0 sm:ml-0 md:ml-28 lg:ml-36 xl:m-0 md:w-8/12 lg:-w-auto xl:w-auto  w-auto sm:p-0  ">
+              <div className="relative -ml-4  sm:-ml-0 md:ml-28 lg:ml-36 xl:m-0 md:w-8/12 lg:-w-auto xl:w-auto  w-auto sm:p-0  ">
                 <h1
                   onMouseOver={() => getHoverSkillDiv(true)}
                   onMouseOut={() => getHoverSkillDiv(false)}
