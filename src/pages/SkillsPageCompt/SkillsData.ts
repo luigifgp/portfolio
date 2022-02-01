@@ -8,7 +8,11 @@ export default [
     height: 300,
   },
   {
-    css: "/skills/html.svg",
+    css: "/skills/docker.svg",
+    height: 300,
+  },
+  {
+    css: "/skills/aws-ec2.svg",
     height: 300,
   },
   {
