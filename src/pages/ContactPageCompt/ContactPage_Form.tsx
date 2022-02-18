@@ -1,57 +1,74 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import  emailjs  from "emailjs-com";
 import { useDispatch, useSelector } from 'react-redux';
-import { formSubmitted, modalOpen } from '../../store/action/index';
-import { getFormSubmittedSlector } from '../../store/selectors';
+import { formSubmitted, modalOpen, formData } from '../../store/action/index';
+import { getFormSubmittedSelector, getFormDataSelector } from '../../store/selectors';
 import ContactPopUp from "./ContactPopup";
 import ModalPopUp from "../../components/Modal";
+import { FormData } from "../../store/types/storeTypes";
 
 
-interface MessageForm {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 const ContactForm: React.FunctionComponent = () => {
+  const getFormSubmitted = useSelector(getFormSubmittedSelector);
 
+  const dispatch = useDispatch();
 
-      const getformSubmitted = useSelector(getFormSubmittedSlector);
-      const dispatch = useDispatch();
-  
+  ///Form handle
+  const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
+  const [formMessage, setFormMessage] = useState<FormData>({});
 
-      ///Form handle
-      const [messageForm, setMessageForm] = useState<HTMLFormElement | string>("");
-      const [searchString, setSearchString] = useState<string>("");
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
+    /// send message by emailjs to an email
+    setMessageForm(event.currentTarget);
+    emailjs
+      .sendForm(
+        "service_5forcpi",
+        "template_oj8znrt",
+        messageForm,
+        process.env.REACT_APP_EMAILJS_USERID
+      )
+      .then((res) => {
+        dispatch(formSubmitted(true));
+        dispatch(formData(emptyForm));
+        dispatch(modalOpen(true));
 
-      const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
+        setTimeout(() => {
+          dispatch(modalOpen(false));
+        }, 2000);
+      })
+      .catch((err) => console.log(err));
+  };
 
-      /// send message by emailjs to an email
-      setMessageForm(event.currentTarget);
-      emailjs
-        .sendForm(
-          "service_5forcpi",
-          "template_oj8znrt",
-          messageForm,
-          process.env.REACT_APP_EMAILJS_USERID
-        )
-        .then((res) => {
-           dispatch(formSubmitted(true));
-            dispatch(modalOpen(true))
-            setTimeout(() => {dispatch(modalOpen(false))}, 2000);
-        })
-        .catch((err) => console.log(err));
-    };
+  ///
+  const emptyForm = {
+    name: "",
+    email: "",
+    subject: "",
+    message: " ",
+  };
 
-   const handleTextArea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-     setSearchString(e.target.value);
-   };
+  /// form values
 
+  const handleChangeInput = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormMessage((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+    dispatch(formData(formMessage));
+  };
 
-   
+  const formDataAdded = useSelector(getFormDataSelector) as FormData;
+
+  useEffect(() => {
+    setFormMessage(formDataAdded);
+  }, [formDataAdded]);
+
   return (
     <div className="p-6 sm:p-10 xl:mb-32  sm:rounded-md bg-DarkModeDark bg-opacity-80 ">
       <form onSubmit={onSubmit} autoComplete="off" className="grid gap-4">
@@ -63,6 +80,8 @@ const ContactForm: React.FunctionComponent = () => {
               type="text"
               className=""
               placeholder="Name"
+              value={formMessage.name}
+              onChange={(e) => handleChangeInput(e)}
               required
             />
             <span className="input_span"></span>
@@ -74,6 +93,8 @@ const ContactForm: React.FunctionComponent = () => {
               type="email"
               className=""
               placeholder="Email"
+              value={formMessage.email}
+              onChange={(e) => handleChangeInput(e)}
               required
             />
             <span className="input_span"></span>
@@ -86,20 +107,26 @@ const ContactForm: React.FunctionComponent = () => {
             type="text"
             className=""
             placeholder="Subject"
+            value={formMessage.subject}
+            onChange={(e) => handleChangeInput(e)}
             required
           />
           <span className="input_span"></span>
         </div>
         <div className="input_container animate-[fadeInUp_1.8s_both]  ">
           <textarea
-            onClick={() => setSearchString(" ")}
-            onFocus={() => setSearchString("")}
+            onClick={() =>
+              !formMessage.message && setFormMessage({ message: " " })
+            }
+            onFocus={() =>
+              !formMessage.message && setFormMessage({ message: " " })
+            }
             typeof="text"
-            value={searchString}
-            onChange={handleTextArea}
             name="message"
             className=" pb-64 -mb-8"
             placeholder="Leave your message here..."
+            value={formMessage.message}
+            onChange={(e) => handleChangeInput(e)}
             required
             rows={5}
             cols={5}
@@ -109,7 +136,7 @@ const ContactForm: React.FunctionComponent = () => {
         <div className="animate-[fadeInUp_3s_both]  ">
           <button
             type="submit"
-            disabled={getformSubmitted}
+            disabled={getFormSubmitted}
             className="lg:px-7 button"
           >
             Send message!

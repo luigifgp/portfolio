@@ -7,7 +7,7 @@ import {
 } from "@react-google-maps/api";
 
 import { MapStyles } from "./GoogleMapStyles";
-import { getFormSubmittedSlector } from "../../store/selectors";
+import { getFormSubmittedSelector } from "../../store/selectors";
 import { useSelector } from "react-redux";
 import { FcSearch } from "react-icons/fc";
 
@@ -25,7 +25,7 @@ const center = {
 };
 
 function GoogleMapLocation() {
-  const formSubmitted = useSelector(getFormSubmittedSlector);
+  const formSubmitted = useSelector(getFormSubmittedSelector);
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",

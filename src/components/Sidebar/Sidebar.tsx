@@ -7,6 +7,7 @@ import HamburgerIcon from "./HamburgerIcon";
 
 import { useSelector } from "react-redux";
 import { getSidebarSelector } from "../../store/selectors";
+import { NavLink } from "react-router-dom";
 
 interface Routes {
   name: string;
@@ -42,22 +43,25 @@ const SideBar: React.FunctionComponent = () => {
         }`}
         >
           <div className="h-32 shadow-zinc-900 shadow-lg   ">
-            <a className="grid top-20 justify-items-center hover:scale-105 duration-500 transition-transform" href="/">
+            <NavLink
+              className="grid top-20 justify-items-center hover:scale-105 duration-500 transition-transform"
+              to="/"
+            >
               <img
                 className=" w-28 h-28  mt-2"
                 src="/svg/logo-luigi.svg"
                 alt="logo"
               />
-            </a>
+            </NavLink>
           </div>
           <div className="grid  justify-items-center gap-2 ">
             {routes.map((route) => (
               <ul className=" transform  transition-transform hover:translate-x-2  ease-in duration-200 text-gray-400 hover:text-OrangeColor">
                 <li>
                   {/* ToDo DarkMode bg-white dark */}
-                  <a href={route.link} className=" ">
+                  <NavLink to={route.link} className=" ">
                     <p className="text-xl  font-semibold ">{route.name}</p>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             ))}
