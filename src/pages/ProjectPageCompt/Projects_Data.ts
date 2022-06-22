@@ -11,13 +11,23 @@ export interface CardProjectData {
 
 export const Projects: CardProjectData[] = [
   {
+    img: "/project-img/project7.png",
+    title: "Github Commits",
+    content:
+      "A project that show commits from this project and also from others users (if it is allow to show those commits) depends on a server base on NESTJS who handle API request to Github.",
+    languages: ["DOCKER", "REACT", "JAVASCRIPT", "REDUX/TOOLKIT", "NESTJS"],
+    urlcode: "https://github.com/luigifgp/test-home",
+    urlDemo: "https://test-home-delta.vercel.app/",
+    haveUrlDemo: false,
+  },
+  {
     img: "/project-img/project1.png",
     title: "Clothes Sell Web",
     content:
       "A website to sell clothes, the customers are able to add them wishes clothes to a car and pay for them.",
     languages: ["SCSS", "REACT", "JAVASCRIPT", "FIREBASE", "STRIPE", "REDUX"],
     urlcode: "https://github.com/luigifgp/clothes_sell_web",
-    urlDemo: "http://52.91.103.138:5000/",
+    urlDemo: "http://18.184.213.184:5000/",
     haveUrlDemo: false,
   },
   {
@@ -45,7 +55,7 @@ export const Projects: CardProjectData[] = [
       "REDUX",
     ],
     urlcode: "https://github.com/luigifgp/coaching-workout-app",
-    urlDemo: "http://52.91.103.138:3000/",
+    urlDemo: "http://18.184.213.184:3000/",
     haveUrlDemo: false,
   },
   {
@@ -55,7 +65,7 @@ export const Projects: CardProjectData[] = [
       "A hard coded framework with typescript, is able to change the name of the user or get a random age, you can also save the information. This framework is reusableful, I integrated a dynamic way that is possible to use with others kind of data.",
     languages: ["TYPESCRIPT", "HTML"],
     urlcode: "https://github.com/luigifgp/user-Framework-TS",
-    urlDemo: "http://52.91.103.138:1234/",
+    urlDemo: "http://18.184.213.184",
     haveUrlDemo: false,
   },
 

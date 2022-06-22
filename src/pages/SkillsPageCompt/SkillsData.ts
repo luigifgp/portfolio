@@ -4,7 +4,7 @@ export default [
     height: 300,
   },
   {
-    css: "/skills/github.svg",
+    css: "/skills/nestjs.svg",
     height: 300,
   },
   {
@@ -48,7 +48,7 @@ export default [
     height: 300,
   },
   {
-    css: "/skills/stripe.svg",
+    css: "/skills/next-js.svg",
     height: 300,
   },
   {
@@ -56,7 +56,7 @@ export default [
     height: 300,
   },
   {
-    css: "/skills/bootstrap.svg",
+    css: "/skills/sanity.svg",
     height: 300,
   },
 ];
